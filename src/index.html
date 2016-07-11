@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Shamir Secret Sharing Scheme</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <meta content="Shamir Secret Sharing Scheme tool" name="description"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Ian Coleman" name="author" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Shamir Secret Sharing Scheme</h1>
+                    <p>Split your secret into parts which can be combined back into the original secret using some or all of the parts.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Split</h2>
+                    <div>
+                        Require
+                        <input class="required form-control" type="number" value="3" min="2" max="255">
+                        parts from
+                        <input class="total form-control" type="number" value="5" min="2" max="255">
+                        to reconstruct the following secret
+                    </div>
+                    <textarea class="secret form-control" rows=10 placeholder="Enter your secret here"></textarea>
+                    <h2>Usage</h2>
+                    <p>Double click each part below to select the content for that part. Copy and paste the content for each part into <span class="distributesize">5</span> individual files on your computer.</p>
+                    <p>Distribute one file to each person in your group.</p>
+                    <p>If <span class="recreatesize">3</span> of those people can combine the contents of their file using this page, they can view the secret.</p>
+                    <p>Remember to delete the parts from your computer once you're finished. If you use a rubbish bin for deleted files, also remove them from the rubbish bin.</p>
+                    <p class="error text-danger"></p>
+                    <h2>Parts</h2>
+                    <ol class="generated">
+                        <li>Enter your secret above.</li>
+                    </ol>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Combine</h2>
+                    <p class="form-control-static">
+                        Enter the secrets, one per line
+                    </p>
+                    <textarea class="parts form-control" rows=10></textarea>
+                    <h2>Result</h2>
+                    <pre class="combined">Enter your parts above.</pre>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="sources">
+                        <h2>Sources</h2>
+                        <p><a href="https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing">Wikipedia entry</a> for shamir secret sharing scheme.</p>
+                        <p>This project is 100% open-source code.</p>
+                        <p><a href="https://github.com/iancoleman/shamir">Project source code</a></p>
+                        <p><a href="https://github.com/amper5and/secrets.js">SSSS javascript library by amper5and</a></p>
+                        <p><a href="https://getbootstrap.com/">Bootstrap stylesheet</a></p>
+                        <h2>Offline Usage</h2>
+                        <p>This tool has been designed to be used offline.</p>
+                        <p>In your browser, select file save-as, and save this page as a file.</p>
+                        <p>Double-click that file to open it in a browser on any offline computer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/secrets.js"></script>
+        <script src="js/selector.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

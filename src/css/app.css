@@ -1,0 +1,30 @@
+input[type="number"] {
+    display: inline-block;
+    width: 70px;
+}
+
+pre {
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    border: inherit;
+    word-break: inherit;
+    white-space: pre-wrap;
+}
+
+.generated {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.part {
+    padding: 10px 0;
+}
+
+.part:nth-of-type(2n+1) {
+    background-color: #F4F4F3;
+}
+
+.part:nth-of-type(2n+0) {
+    background-color: #E9E8E6;
+}
